@@ -1,0 +1,24 @@
+const int ledPin = 13; // Built-in LED function for arduino
+const int soundPin = 7; // connect the out port of LM393 to 7 digital
+//Initialize the variable soundVal to 0
+int soundVal = 0;
+
+void setup ()
+{
+  pinMode (ledPin, OUTPUT);
+  pinMode (soundPin, INPUT);
+}
+ 
+void loop ()
+{
+  soundVal = digitalRead(soundPin);
+  if (soundVal == 1)
+  {
+    digitalWrite(ledPin, HIGH);
+     delay(4);
+  }
+  else
+  {
+    digitalWrite(ledPin, LOW);
+  
+  }
